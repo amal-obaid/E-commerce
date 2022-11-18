@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=League+Spartan:wght@100;200;400;500;700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Dancing+Script:wght@700&family=League+Spartan:wght@100;200;400;500;700&family=Roboto:wght@100&display=swap');  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'spartan' sans-serif;
+    
+  }
+  h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:#222
+  }
+  h2{
+    font-size: 46px;
+    line-height: 54px;
+    color:#222
+  }
+  h4{
+    font-size: 20px;
+    color:#222
+  }
+  h4{
+    font-size: 12px;
+    font-weight: 700;  
+  }
+  p{
+    font-size: 18px;
+    color: #252e2a;
+    margin: 15px 0 20px 0;
+  }
+  .section-p1{
+    padding: 40px 80px;
+  }
+  .section-m1{
+    margin: 40px 0;
+  }
+  body{
+    width: 100%;
+  }
+  /* navbar */
+  #nav{
+    background: #e3e6f3;
+    padding: 5px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+  }
+  #ul-nav{
+    margin: auto;
+    text-align: center;
+  }
+  #ul-nav li{
+    padding: 0 20px;
+    position: relative;
+  }
+  #ul-nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+  }
+  #ul-nav li a:hover,
+  #ul-nav li a:active{
+    color: #088178;
+  }
+  #ul-nav li a:active::after,
+  #ul-nav li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+  @media only screen and (max-width: 600px){
+    #ul-nav li a:active::after,
+  #ul-nav li a:hover::after{
+    width: 0%;
+  }
+  .right-div-nav{
+    text-align: center;
+  }
+  }
+  .navbar-brand img{
+    height: 80px;
+
+  }
+  .shopping-cart{
+    font-size: 28px;
+    color: #088178;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+  /* -----------------------------------shopping-cart------------------------------------------- */
+  .producstOnCart {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    background-color: #088179;
+    width: 300px;
+    height:500px;
+    color: #f0f0f0;
+    z-index: 15;
+    position: fixed;
+    top: 20px;
+    right: 0;
+    text-align: center;
+    animation: fade 1s;
+}
+
+.producstOnCart::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes fade {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.producstOnCart::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.hide {
+    display: none;
+    visibility: none;
+}
+
+.producstOnCart ul {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producstOnCart .buyItem {
+    border-bottom: #aaa 1px solid;
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+}
+
+.producstOnCart img {
+    width: 90px;
+}
+
+.producstOnCart .top {
+    display: flex;
+    background-color: #e3e6f3;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.top button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #088178;
+    cursor: pointer;
+}
+.top button:hover {
+    opacity: 0.5;
+}
+.top h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    color: #088178
+}
+.producstOnCart > .clearAll {
+    font-size: 1rem;
+    margin: 20px auto;
+    border: none;
+    background-color: #e3e6f3;
+    padding: 10px 20px;
+    color: #088178;
+    border-radius: 20px 20px 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.stopScrolling {
+    height: 100vh;
+    overflow: hidden;
+}
+.buyItem h6 {
+    margin-bottom: 10px;
+}
+.buyItem button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0 6px;
+    border: none;
+}
+.buyItem button:active {
+    color: #96c8cc;
+}
+.buyItem > div {
+    padding: 0 20px;
+}
+.producstOnCart .empty {
+    justify-self: center;
+    margin: 150px auto;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+  /* -----------------------------------------------bottons---------------------------------------------- */
+  #sign-in , #sign-up{
+    color: #088178;
+    border-color: #088178;
+    border-width: 3px;
+    border-radius: 20px 20px 20px 0;
+    font-weight: 700;
+    width: 100px;
+    margin: 0 10px;
+  }
+  #sign-in:hover , #sign-up:hover{
+    background-color: #088178;
+    color: #fff;
+  }
+  #usernamelog{
+    color: #088178;
+    font-size: 24px;
+  }
+ /* log in window */
+
+/* Set a style for all buttons */
+.log-in , .signupbtn {
+  background-color: #088178;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px 20px 20px 0;
+}
+.log-in:hover , .cancelbtn:hover , .signupbtn:hover , #hero button:hover{
+  opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgb(189, 21, 21);
+  border-radius: 20px 20px 20px 0;
+  border-color: rgb(189, 21, 21);
+  color: #fff;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 40px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: none;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 40%;
+  margin: 0 5%;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+/*section1*/
+#hero{
+  height: auto;
+  width: 100%;
+  background-color: #e3e6f3;
+  padding: 20px 80px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+  #hero:nth-child(1){
+    width: 70%;
+  }
+#hero h4{
+  padding-bottom: 20px;
+  padding-top: 80px;
+  font-weight: bold;
+}
+#hero h1{
+  color: #088178;
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+  padding-bottom: 20px;
+}
+#hero button{
+  background-color: #088178;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 25px 25px 25px 0;
+}
+#hero img{
+  width: 80vh;
+}
+/* *****************************features secthion************************** */
+#feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#feature .fe-box{
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+#feature .fe-box:hover{
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.3);
+}
+#feature img{
+  width: 100%;
+  margin-bottom: 10px
+}
+#feature .fe-box h6{
+  display: inline-block;
+  padding: 9px 8px ;
+  line-height: 1;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #088178;
+}
+#feature .fe-box:nth-child(2) h6,
+#feature .fe-box:nth-child(4) h6,
+#feature .fe-box:nth-child(6) h6{
+  background-color: #f37d83;
+}
+/*       products section         */
+.product-sec{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background: #e3e6f3;
+  overflow: hidden;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+.product-sec::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #088178;
+  clip-path:circle(35% at 100% -20%)
+}
+.product-sec::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #088178;
+  clip-path:circle(25% at 0.3% 100%);
+}
+.contain{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contain .card{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15bx);
+}
+.contain .card .imgBx{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+.contain .card:hover .imgBx{
+  transform: translateY(-50px);
+}
+.contain .card .imgBx img{
+  max-width: 100%;
+  margin-top: -80px;
+  transition: 0,5s ease-in-out;
+}
+.contain .card .imgBx h2{
+  color:#088178;
+  font-weight: 600;
+  margin-top: -70px;
+}
+.contain .card .content{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.contain .card:hover .content{
+  opacity: 1;
+  visibility: visible;
+}
+.contain .card .content a{
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  text-align: center;
+  background: #f37d83ab;
+  border-radius: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* ----------------------------baby shower section------------------------ */
+.baby-shower-sec{
+  position: relative;
+}
+.baby-shower img:hover{
+  transform: scale(1.2);
+}
+.store {
+  background: rgb(238, 238, 238);
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: #088178;
+  color: #fff;
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color: #fff;
+}
+/*end of  store items */
+.store-item-sec{
+  background-color: #e3e6f3;
+}
+

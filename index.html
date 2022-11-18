@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="logo.ico" />
+    <title>YARA Store</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" id="logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav " id="ul-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>  
+      </ul>
+      <div class="right-div-nav">
+        <i class="fas fa-search shopping-cart" ></i>
+        <i class="fas fa-shopping-cart shopping-cart shoppingCartButton"></i>
+        <i class="fas fa-user shopping-cart" id="user-icon" onclick="document.getElementById('id02').style.display='block'"></i>
+        <span id="usernamelog" ></span>
+      </div>
+      <div class="producstOnCart hide">
+        <div class="overlay"></div>
+        <div class="top">
+            <button id="closeButton">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <h3>Your Cart</h3>
+        </div>
+        <ul id="buyItems">
+            <h4 class="empty">Your shopping cart is empty</h4>
+            <!-- <li class="buyItem">
+    <img src="img/14.png">
+    <div>
+      <h5>Products Name</h5>
+      <h6>$199</h6>
+      <div>
+        <button>-</button>
+        <span class="countOfProduct">1</span>
+        <button>+</button>
+      </div>
+    </div>
+  </li> -->
+        </ul>
+        <h6 id="sum-prices"></h6>
+        <!-- <button class="btn clearAll hidden" >Clear All</button> -->
+    </div>
+    </div>
+     </nav>
+    <!------------------------ log in form ----------------------------------->
+<div id="id01" class="modal">
+  
+  <form class="modal-content container animate" >
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="container">
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" id="usernameLogin" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="passwordLogin" required>
+        
+      <button id="logINBtn"  class="log-in" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" style="margin: 0;" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+    </form>
+    <!------------------------ sign up form ----------------------------------->
+    <div id="id02" class="modal">
+      <form class="modal-content container animate" >
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="container">
+          <h1>Sign Up</h1>
+          <hr>
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" id="username" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+    
+          <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
+          
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+    
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn" id="sign_up"  >Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!------------------------ section1 ----------------------------------->
+    <section id="hero">
+      <div>
+      <h4>Anything for your baby</h4>
+      <h1>Baby Shop</h1>
+        <p>Supporting your motherhood journey <br>	from prenancy and beyond</p>
+        <button>Shop Now</button>
+      </div>
+      <div>
+        <img src="img/slid-img.png">
+      </div>
+      
+    </section>
+    <!------------------------  .section-p1 ----------------------------------->
+    <div id="feature" class="section-p1 bg-light">
+      <div class="fe-box">
+        <img src="img/free-delivery.png" alt="shipping">
+        <h6>Free shipping</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/online-shop (1).png"  alt="Order">
+        <h6>Online Order</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/savings.png" alt="Save Money">
+        <h6>Save Money</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/promotions.png" alt="Promotions">
+        <h6>Promotions</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/positive-vote.png" alt="happy sell">
+        <h6>Happy Sell</h6>
+      </div>
+      <div class="fe-box">
+        <img src="img/24-hours.png" alt="Support">
+        <h6>F24/7 Support</h6>
+      </div>
+    </div>
+     <!------------------------  products-section ----------------------------------->
+     <section class="product-sec">
+      <h1 class="text-center mb-4">Shop by Categories</h1>
+      <div class="contain">
+        <div class="card">
+          <div class="imgBx">
+            <img src="img/heater-beige-1.png" alt="">
+            <h2>Baby Toys</h2>
+          </div>
+          <div class="content">
+            <a class="pl-4 pr-4 pt-2 pb-2" href="#">See More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="img/sleeve-check-1.png" alt="">
+            <h2>Baby Clothing</h2>
+          </div>
+          <div class="content">
+            <a class="pl-4 pr-4 pt-2 pb-2" href="#">See More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="img/traverze-stroller-yellow.png" alt="">
+            <h2>Baby Strollers</h2>
+          </div>
+          <div class="content">
+              <a class="pl-4 pr-4 pt-2 pb-2" href="#">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------baby shower----------------------------------- -->
+    <section class="baby-shower-sec bg-light">
+      <div class="container">
+        <h2 class="text-center mt-5">Ready for baby shower party</h2>
+        <div class="baby-shower d-flex justify-content-center flex-column flex-md-column flex-lg-row flex-xl-row" >
+          <img src="img/it'saboy.png" alt="it's a boy" width="500px" height="500px">
+          <img src="img/it'sagirl.png" alt="it's a girl" width="500px" height="500px">
+        </div>
+
+      </div>
+    </section>
+
+    <!---------------------------- store  items---------------------------------->
+    <section class="store-item-sec">
+      <div class="container">
+    <h1 class="text-center mt-5 mb-5">Best Seller</h1>
+    <div class="row" class="store-items" id="store-items">
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product" >
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/2.jpeg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="1"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">Navy dress</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+            </div>
+          </div>
+        </div>
+        <!-- end of card-->
+      </div>
+      <!--end of single store item-->
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product" >
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/14.png" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="2"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">pink dress</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+            </div>
+          </div>
+        </div>
+        <!-- end of card-->
+      </div>
+      <!--end of single store item-->
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product" >
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/4.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="3"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">jumpsuit baby</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+            </div>
+          </div>
+        </div>
+        <!-- end of card-->
+      </div>
+      <!--end of single store item-->
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product" >
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/12.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="4"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">Baby dress</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">12</strong></h5>
+            </div>
+          </div>
+        </div>
+        <!-- end of card-->
+      </div>
+      <!--end of single store item-->
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product">
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/10.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="5"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">Wool Sweater</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+            </div>
+          </div>
+        </div>
+        <!-- end of card-->
+      </div>
+      <!--end of single store item-->
+      <!-- single item -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product">
+        <div class="card ">
+          <div class="img-container">
+            <img src="img/9.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart addToCart" data-product-id="6"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">Wool Sweater</h5>
+              <h5 class="price">$ <strong id="store-item-price" class="font-weight-bold">16</strong></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+        <!-- end of card-->
+</body>
+</html>
+<!------------------------------- Footer ------------------------------------------------->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998; border-radius: 50%;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee; border-radius: 50%;" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+  
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39; border-radius: 50%;" href="#!" role="button"><i class="fab fa-google"></i></a>
+  
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac; border-radius: 50%;" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+  
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca; border-radius: 50%;" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        
+  
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <img src="img/logo.png" style="height:150PX; ;" id="logo" />
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Baby Toys</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Baby Clothing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Baby Strollers</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@yara.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="#">AMAL OBAID</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
